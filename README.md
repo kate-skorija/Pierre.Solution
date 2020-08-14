@@ -42,10 +42,6 @@ This week I continued to focus on databases with many-to-many relationships usin
   * Input: *On a treat's details page, user clicks "Add flavor"*
   * Output: User is taken to a page with a form that allows them to add a flavor for that treat
 
-**Behavior**: Program will allow user to add treats to an existing flavor 
-  * Input: *On a flavor's details page, user clicks "Add treat"*
-  * Output: User is taken to a page with a form that allows them to add a treat for that flavor
-
 **Behavior**: Program will allow user to remove flavors from a treat
   * Input: *User clicks "Delete" under an flavor's name on treat's details page*
   * Output: Relationship to that flavor is removed
