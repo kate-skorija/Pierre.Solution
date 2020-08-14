@@ -7,7 +7,6 @@ using System.Linq;
 
 namespace Bakery.Controllers
 {
-  [Authorize]
   public class HomeController : Controller
   {
     private readonly BakeryContext _db;
@@ -20,6 +19,13 @@ namespace Bakery.Controllers
 
     [HttpGet("/")]
     public ActionResult Index()
+    {
+      return View();
+    }
+
+    [Authorize]
+    [HttpGet("/Home")]
+    public ActionResult Details()
     {
       ViewBag.Flavors = _db.Flavors.ToList();
       ViewBag.Treats = _db.Treats.ToList();

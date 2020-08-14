@@ -3,6 +3,7 @@
 }
 
 @model Bakery.Models.Flavor
+@Html.Partial("Nav")
 
 <h2>Add a New Flavor</h2>
 
@@ -10,6 +11,6 @@
 {
   @Html.LabelFor(model => model.Name)
   @Html.TextBoxFor(model => model.Name, new { @class="form-control", required="required" })
-  
+
   <input type="submit" value="Add New Flavor" />
 }
