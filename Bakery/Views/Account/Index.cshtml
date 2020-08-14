@@ -2,21 +2,20 @@
   Layout = "_Layout";
 }
 
-<h2>Authentication with Identity</h2> 
+<h2>Account Authentication</h2> 
 
 <hr />
 @if (User.Identity.IsAuthenticated)
 {
-  <p>Hello @User.Identity.Name!</p>
+  <h3>Hello @User.Identity.Name!</h3>
   <button class="btn btn-dark">@Html.ActionLink("View All Treats and Flavors!", "Index", "Home")</button>
   @using (Html.BeginForm("LogOff", "Account"))
   {
-    <input type="submit" class="btn btn-default" value="Log out" />
+    <input type="submit" class="btn btn-default btn-dark" value="Log out" />
   }
 }
 else
 {
-  <p>A user with those credentials was not found, please try again or register for an acoount if you have not created one.</p>
-  <p>@Html.ActionLink("Register", "Register")</p>
-  <p>@Html.ActionLink("Log in", "Login")</p>
+  <p>Thank you for creating an account! Please log in to continue.</p>
+  <button class="btn btn-dark">@Html.ActionLink("Log in", "Login")</button>
 }
