@@ -21,6 +21,7 @@
           <a class="nav-link" href="/Account">My Account</a>
         </li>
       </ul>
+      @if (User.Identity.IsAuthenticated == false) {
       <ul class="navbar-nav ml-auto right">
           <li class="nav-item">
             <a class="nav-link" href="/Account/Login">Login</a>
@@ -29,6 +30,7 @@
             <a class="nav-link" href="/Account/Register">Register</a>
           </li>
       </ul>
+      }
     </nav>
     <div class="container-fluid">
       @RenderBody()

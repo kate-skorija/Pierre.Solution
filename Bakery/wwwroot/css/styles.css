@@ -15,10 +15,16 @@ a {
 
 ul {
   list-style-type: circle;
+  font-size: 20px;
 }
 
 h2 {
+  font-size: 45px;
   font-family: 'Merriweather', serif
+}
+
+h3 {
+  font-size: 35px;
 }
 
 /* -------------- Forms ---------------- */
@@ -50,6 +56,10 @@ h2 {
   list-style-position: inside;
   font-size: 25px;
   padding: 0;
+}
+
+.splash h2 a {
+  color: #292929;
 }
 
 .row {
@@ -128,9 +138,5 @@ nav {
 
 .nav-item a {
   color: #292929;
-}
-
-.right {
-  float: right;
 }
 
