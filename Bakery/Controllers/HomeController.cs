@@ -24,7 +24,7 @@ namespace Bakery.Controllers
     }
 
     [Authorize]
-    [HttpGet("/Home")]
+    [HttpGet("/Details")]
     public ActionResult Details()
     {
       ViewBag.Flavors = _db.Flavors.ToList();

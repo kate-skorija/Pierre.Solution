@@ -64,7 +64,7 @@ namespace Bakery.Controllers
         _db.FlavorTreat.Add(new FlavorTreat() { TreatId = TreatId, FlavorId = flavor.FlavorId });
       }
       _db.SaveChanges();
-      return RedirectToAction("Index", "Home");
+      return RedirectToAction("Details", "Home");
     }
     public ActionResult Delete(int id)
     {

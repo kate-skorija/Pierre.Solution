@@ -2,7 +2,7 @@ body{
   padding: 15px 30px;
   color: #292929;
   font-family: 'Roboto', sans-serif;
-  /* font-family: 'Merriweather', serif; */
+  /* ; */
 }
 
 .content{
@@ -15,6 +15,10 @@ a {
 
 ul {
   list-style-type: circle;
+}
+
+h2 {
+  font-family: 'Merriweather', serif
 }
 
 /* -------------- Forms ---------------- */
@@ -86,14 +90,13 @@ button a {
   font-size: 20px;
 }
 
-input {
+.btn-dark{
   color: whitesmoke;
   font-family: 'Bebas Neue', cursive;
-}
-
-button {
-  margin: 15px 0;
+  font-size: 20px;
+  letter-spacing: 1px;
   background-color: #292929 !important;
+  margin: 15px 0;
 }
 
 /* ----------- Home Index ------------- */
@@ -119,6 +122,10 @@ button {
 
 /* ----------- NavBar ------------- */
 
+nav {
+  font-family: 'Merriweather', cursive;
+}
 .nav-item a {
   color: #292929;
 }
+
