@@ -1,6 +1,4 @@
 using Bakery.Models;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 
@@ -10,10 +8,8 @@ namespace Bakery.Controllers
   public class HomeController : Controller
   {
     private readonly BakeryContext _db;
-    private readonly UserManager<ApplicationUser> _userManager;
-    public HomeController(UserManager<ApplicationUser> userManager, BakeryContext db)
+    public HomeController( BakeryContext db)
     {
-      _userManager = userManager;
       _db = db;
     }
 
@@ -23,7 +19,6 @@ namespace Bakery.Controllers
       return View();
     }
 
-    [Authorize]
     [HttpGet("/Details")]
     public ActionResult Details()
     {

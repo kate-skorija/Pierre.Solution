@@ -1,5 +1,7 @@
 using Bakery.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
@@ -10,15 +12,17 @@ namespace Bakery.Controllers
   public class TreatsController : Controller
   {
     private readonly BakeryContext _db;
-
-    public TreatsController(BakeryContext db)
+    private readonly UserManager<ApplicationUser> _userManager;
+    public TreatsController(UserManager<ApplicationUser> userManager, BakeryContext db)
     {
+      _userManager = userManager;
       _db = db;
     }
     public ActionResult Index()
     {
       return View(_db.Treats.ToList());
     }
+    [Authorize]
     public ActionResult Create()
     {
       return View();
@@ -38,6 +42,7 @@ namespace Bakery.Controllers
           .FirstOrDefault(treat => treat.TreatId == id);
       return View(thisTreat);
     }
+    [Authorize]
     public ActionResult Edit(int id)
     {
       var thisTreat = _db.Treats.FirstOrDefault(treat => treat.TreatId == id);
@@ -50,6 +55,7 @@ namespace Bakery.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+    [Authorize]
     public ActionResult AddFlavor(int id)
     {
       var thisTreat = _db.Treats.FirstOrDefault(treat => treat.TreatId == id);
@@ -66,6 +72,7 @@ namespace Bakery.Controllers
       _db.SaveChanges();
       return RedirectToAction("Details", "Home");
     }
+    [Authorize]
     public ActionResult Delete(int id)
     {
       var thisTreat = _db.Treats.FirstOrDefault(treat => treat.TreatId == id);
@@ -79,6 +86,7 @@ namespace Bakery.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+    [Authorize]
     [HttpPost]
     public ActionResult DeleteFlavor(int joinId)
     {

@@ -125,7 +125,12 @@ button a {
 nav {
   font-family: 'Merriweather', cursive;
 }
+
 .nav-item a {
   color: #292929;
+}
+
+.right {
+  float: right;
 }
 
