@@ -57,7 +57,7 @@ namespace Bakery.Controllers
       return View(thisTreat);
     }
     [HttpPost]
-    public ActionResult AddFlavor(Treat treat , int FlavorId)
+    public ActionResult AddFlavor(Treat treat, int FlavorId)
     {
       if (FlavorId != 0)
       {
