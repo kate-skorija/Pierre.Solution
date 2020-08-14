@@ -3,6 +3,7 @@ using Bakery.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks; 
+using System.Windows;
 
 namespace Bakery.Controllers
 {
@@ -27,10 +28,10 @@ namespace Bakery.Controllers
       return View();
     }
     [HttpPost]
-    public async Task<ActionResult> Register(RegisterViewModel model) //async - the task contains ActionResult
+    public async Task<ActionResult> Register(RegisterViewModel model) 
     {
       var user = new ApplicationUser { UserName = model.Email };
-      IdentityResult result = await _userManager.CreateAsync(user, model.Password); //CreateAsync comes from depenency injection : UserManager
+      IdentityResult result = await _userManager.CreateAsync(user, model.Password);
       if (result.Succeeded)
       {
         return RedirectToAction("Index");
@@ -54,6 +55,7 @@ namespace Bakery.Controllers
       }
       else
       {
+        ViewBag.Error = "Incorrect login information. Please try again or make a new account.";
         return View();
       }
     }
