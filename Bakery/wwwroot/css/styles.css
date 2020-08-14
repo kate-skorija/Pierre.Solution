@@ -1,15 +1,29 @@
 body{
   padding: 15px 30px;
-  font-family: 'Merriweather', serif;
+  color: #292929;
+  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Merriweather', serif; */
 }
 
 .content{
   margin: 20px 30px;
 }
 
+a {
+  color: rgb(155, 111, 111);
+}
+
+ul {
+  list-style-type: circle;
+}
+
+/* -------------- Forms ---------------- */
+
 .form-control{
   margin: 0 0 20px 10px;
 }
+
+/* ------------ Splash Page ------------- */
 
 .splash h1 {
   font-family: 'Allan', cursive;
@@ -17,7 +31,7 @@ body{
   padding: 50px 0;
   text-align: center;
   padding-bottom: 0px;
-  color: rgb(56, 46, 70);
+  color: #292929;
 }
 
 .splash h2 {
@@ -39,28 +53,14 @@ body{
   text-align: center;
 }
 
+/* ----------- Details Pages ------------- */
+
 .details ul li ul {
   padding: 0 10px;
 }
 
 .details label {
   font-weight: bold;
-}
-
-button a {
-  color: whitesmoke;
-  font-family: 'Bebas Neue', cursive;
-  letter-spacing: 1px;
-  font-size: 20px;
-}
-
-input {
-  color: whitesmoke;
-  font-family: 'Bebas Neue', cursive;
-}
-
-button {
-  margin: 15px 0;
 }
 
 .inline{
@@ -77,6 +77,27 @@ form input {
   display: inline-block;
 }
 
+/* ----------- Buttons & Inputs ------------- */
+
+button a {
+  color: whitesmoke;
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+
+input {
+  color: whitesmoke;
+  font-family: 'Bebas Neue', cursive;
+}
+
+button {
+  margin: 15px 0;
+  background-color: #292929 !important;
+}
+
+/* ----------- Home Index ------------- */
+
 #homeIndex {
   text-align: center;
   margin: 100px;
@@ -86,7 +107,7 @@ form input {
   font-size: 200px;
   padding: 0;
   margin-bottom: 20px;;
-  color: rgb(56, 46, 70);
+  color: #292929;
 }
 
 #homeIndex h2 {
@@ -96,10 +117,8 @@ form input {
   margin-top: 0;
 }
 
-a {
-  color: rgb(192, 117, 117);
-}
+/* ----------- NavBar ------------- */
 
-ul {
-  list-style-type: circle;
+.nav-item a {
+  color: #292929;
 }
