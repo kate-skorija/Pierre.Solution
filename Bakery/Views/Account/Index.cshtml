@@ -1,0 +1,22 @@
+@{
+  Layout = "_Layout";
+}
+
+<h2>Authentication with Identity</h2> 
+
+<hr />
+@if (User.Identity.IsAuthenticated)
+{
+  <p>Hello @User.Identity.Name!</p>
+  <button class="btn btn-dark">@Html.ActionLink("View All Treats and Flavors!", "Index", "Home")</button>
+  @using (Html.BeginForm("LogOff", "Account"))
+  {
+    <input type="submit" class="btn btn-default" value="Log out" />
+  }
+}
+else
+{
+  <p>A user with those credentials was not found, please try again or register for an acoount if you have not created one.</p>
+  <p>@Html.ActionLink("Register", "Register")</p>
+  <p>@Html.ActionLink("Log in", "Login")</p>
+}
