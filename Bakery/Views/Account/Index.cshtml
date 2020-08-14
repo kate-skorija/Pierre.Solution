@@ -3,19 +3,22 @@
 }
 
 <h2>Account Authentication</h2> 
+<hr />
 
-@if (User.Identity.IsAuthenticated)
-{
-  <h3>Hello @User.Identity.Name!</h3>
-  <h4>Welcome to the Pierre's Bakery App.</h4>
-  <button class="btn btn-dark">@Html.ActionLink("View Our Goods", "Details", "Home")</button>
-  @using (Html.BeginForm("LogOff", "Account"))
+<div class="content">
+  @if (User.Identity.IsAuthenticated)
   {
-    <input type="submit" class="btn btn-default btn-dark" value="Log out" />
+      <h3>Hello @User.Identity.Name!</h3>
+      <h4>Welcome to Pierre's Bakery App.</h4>
+      <button class="btn btn-dark">@Html.ActionLink("View Our Goods", "Details", "Home")</button><br>
+      @using (Html.BeginForm("LogOff", "Account"))
+      {
+        <input type="submit" class="btn btn-default btn-dark" value="Log out" />
+      }
   }
-}
-else
-{
-  <p>Thank you for creating an account! Please log in to continue.</p>
-  <button class="btn btn-dark">@Html.ActionLink("Log in", "Login")</button>
-}
+  else
+  {
+    <p>Thank you for creating an account! Please log in to continue.</p>
+    <button class="btn btn-dark">@Html.ActionLink("Log in", "Login")</button>
+  }
+</div>

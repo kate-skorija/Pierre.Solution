@@ -1,18 +1,36 @@
+body{
+  padding: 15px 30px;
+  font-family: 'Merriweather', serif;
+}
+
+.content{
+  margin: 20px 30px;
+}
+
+.form-control{
+  margin: 0 0 20px 10px;
+}
+
 .splash h1 {
-  font-size: 100px;
+  font-family: 'Allan', cursive;
+  font-size: 130px;
   padding: 50px 0;
   text-align: center;
+  padding-bottom: 0px;
+  color: rgb(56, 46, 70);
 }
 
 .splash h2 {
-  font-size: 50px;
+  color: #292929;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 70px;
   text-align: center;
 }
 
 .splash ul {
   text-align: left;
   list-style-position: inside;
-  font-size: 30px;
+  font-size: 25px;
   padding: 0;
 }
 
@@ -27,4 +45,61 @@
 
 .details label {
   font-weight: bold;
+}
+
+button a {
+  color: whitesmoke;
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+
+input {
+  color: whitesmoke;
+  font-family: 'Bebas Neue', cursive;
+}
+
+button {
+  margin: 15px 0;
+}
+
+.inline{
+  display: inline-block;
+  margin: 10px 15px 0 0;
+  font-size: 20px;
+}
+
+form {
+  display: inline;
+}
+
+form input {
+  display: inline-block;
+}
+
+#homeIndex {
+  text-align: center;
+  margin: 100px;
+}
+#homeIndex h1 {
+  font-family: 'Allan', cursive;
+  font-size: 200px;
+  padding: 0;
+  margin-bottom: 20px;;
+  color: rgb(56, 46, 70);
+}
+
+#homeIndex h2 {
+  font-family: 'Bebas Neue', cursive;
+  color: #292929;
+  font-size: 40px;
+  margin-top: 0;
+}
+
+a {
+  color: rgb(192, 117, 117);
+}
+
+ul {
+  list-style-type: circle;
 }

@@ -5,16 +5,18 @@
 @model Bakery.Models.Treat
 @Html.Partial("Nav")
 
-<h2>Add a Flavor</h2>
+<div class="content">
+  <h2>Add a Flavor</h2>
 
-<h4>Add a flavor to this treat: @Html.DisplayFor(model => model.Name)</h4>
+  <h4>Add a flavor to this treat: @Html.DisplayFor(model => model.Name)</h4>
 
-@using (Html.BeginForm())
-{
-    @Html.HiddenFor(model => model.TreatId)
+  @using (Html.BeginForm())
+  {
+      @Html.HiddenFor(model => model.TreatId)
 
-    @Html.Label("Select Flavor")
-    @Html.DropDownList("FlavorId")
+      @Html.Label("Select Flavor")
+      @Html.DropDownList("FlavorId")
 
-    <input type="submit" value="Save" />
-}
+      <input type="submit" value="Save" />
+  }
+</div>
