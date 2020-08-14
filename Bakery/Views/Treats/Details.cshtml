@@ -28,7 +28,8 @@ else
   }
   </ul>
 }
-
-<button class="btn btn-dark">@Html.ActionLink("Add Flavor", "AddFlavor", new { id = @Model.TreatId })</button>
-<button class="btn btn-dark">@Html.ActionLink("Edit Treat", "Edit", new { id = @Model.TreatId })</button>
-<button class="btn btn-dark">@Html.ActionLink("Delete Treat", "Delete", new { id = @Model.TreatId })</button>
+<div class="btn-group" role="group">
+  <button class="btn btn-dark">@Html.ActionLink("Add Flavor", "AddFlavor", new { id = @Model.TreatId })</button>
+  <button class="btn btn-dark">@Html.ActionLink("Edit Treat", "Edit", new { id = @Model.TreatId })</button>
+  <button class="btn btn-dark">@Html.ActionLink("Delete Treat", "Delete", new { id = @Model.TreatId })</button>
+</div>
