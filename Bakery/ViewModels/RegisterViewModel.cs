@@ -16,7 +16,7 @@ namespace Bakery.ViewModels
 
     [DataType(DataType.Password)]
     [Display(Name = "Confirm Password")]
-    [Comapre("Password", ErrorMessage = "The password and password confirmation do not match.")]
+    [Compare("Password", ErrorMessage = "The password and password confirmation do not match.")]
     public string ConfirmPassword { get; set; }
   }
 }
