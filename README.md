@@ -1,12 +1,14 @@
-# Pierre's Bakery, Treats and Flavors Manager
-
-#### Authentication with Identity Exercise for Epicodus 08.14.2020
-
-### By Kate Skorija
+<header align="center">
+  <h1>Pierre's Bakery, Treats and Flavors Manager</h1><br>
+  <h2>Authentication with Identity Exercise for Epicodus 08.14.2020</h2><br>
+  <a href="https://github.com/kate-skorija/Pierre.Solution"><img src="Bakery/Views/Shared/img/splash.png" alt="Bakery Splash Page" width="1000"></a>
+</header><br>
 
 ## Description
 
 This week I continued to focus on databases with many-to-many relationships using SQL and Entity, and I also learned about adding authentication with Identity. This project is a C# MVC web application for Pierre's Bakery. It was built to help Pierre and his customers track the types of treats and flavors in his shop, and their relationships. This app requires the user to login to be able to create, update, and delete information about the treats and flavors.  
+
+<br><a href="https://github.com/kate-skorija/Pierre.Solution"><img src="Bakery/Views/Shared/img/login.png" alt="Bakery Login Page" width="1000"></a><br>
 
 ## Specifications
 
@@ -54,6 +56,9 @@ This week I continued to focus on databases with many-to-many relationships usin
   * Input: *User clicks "Delete" under an treat's name on flavor's details page*
   * Output: Relationship to that treat is removed
 
+## Stretch Goals
+*  Create an order class, and allow users to add treats to their order
+
 ## Setup/Installation Requirements
 
 *_These instructions are specifically for MySql Workbench, but should work similarly for or any generic SQL database manager._* 
@@ -67,11 +72,11 @@ This week I continued to focus on databases with many-to-many relationships usin
 
 4. Within the project, navigate to the Factory directory, and type `dotnet restore`, then `dotnet build`. 
 
-5. Return to your terminal for the Factory directory, and enter `dotnet ef migrations add Initial`. If there is an `Unable to resolve project` error, ensure you are in the correct directory, Factory. A Migrations folder should automatically generate in the Factory directory.
-
-6. After the initial migration is complete, run the command `dotnet ef database update`. This will create a `kate_skorija` database in MySql Workbench. Open or refresh MySql Workbench and confirm that the new database has been created.
+5. After the build is complete, run the command `dotnet ef database update`. This will create a `bakery` database in MySql Workbench. Open or refresh MySql Workbench and confirm that the new database has been created.
 
 7. Type `dotnet run` into the terminal. Click on the provided local host link in the terminal to view the web application in your browser. 
+
+Note: If the application is not letting you login after registering an account, try opening the local host in a private browsing window. 
 
 ## Known Bugs
 
